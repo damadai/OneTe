@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clTool_media"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:visibility="visible">
+
+    <View
+        android:id="@+id/vStart"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btBack_media"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--返回键-->
+    <ImageView
+        android:id="@+id/btBack_media"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:src="@mipmap/ic_back_144"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btHome_media"
+        app:layout_constraintStart_toEndOf="@id/vStart" />
+
+    <!--首页键-->
+    <ImageView
+        android:id="@+id/btHome_media"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:src="@mipmap/ic_home_144"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btMenu_media"
+        app:layout_constraintStart_toEndOf="@+id/btBack_media" />
+
+    <!--菜单键-->
+    <ImageView
+        android:id="@+id/btMenu_media"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:src="@mipmap/ic_menu_144"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btAudio_media"
+        app:layout_constraintStart_toEndOf="@+id/btHome_media" />
+
+    <!--音量-->
+    <ImageView
+        android:id="@+id/btAudio_media"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:src="@mipmap/ic_add_144"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSet_media"
+        app:layout_constraintStart_toEndOf="@+id/btMenu_media" />
+
+    <Button
+        android:id="@+id/btRed_media"
+        android:layout_width="@dimen/dp_36"
+        android:layout_height="22dp"
+        android:background="@drawable/duo_radius_red_24"
+        android:gravity="center"
+        android:text="@string/push_dop"
+        android:textColor="@color/duo_media_white"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/btAudio_media"
+        app:layout_constraintTop_toTopOf="@+id/btAudio_media" />
+
+    <!--更多-->
+    <ImageView
+        android:id="@+id/ivSet_media"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:src="@mipmap/ic_set_144"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vEnd"
+        app:layout_constraintStart_toEndOf="@id/btAudio_media" />
+
+    <View
+        android:id="@+id/vEnd"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/duo_media_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivSet_media" />
+</androidx.constraintlayout.widget.ConstraintLayout>

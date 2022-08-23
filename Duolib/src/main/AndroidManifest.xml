@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cloud.duolib">
+    <!-- 友盟需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 震动权限扫一扫 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 扩展服务扫一扫功能 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 视频内，微信语音工具 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- JobIntentService -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application>
+        <activity
+            android:name=".ui.duo.DeviceMediaActivity"
+            android:configChanges="orientation|navigation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.VideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.PreDataActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".model.FileJobService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- 调用init初始化方法，传参数isKeepConnect=true时，必须配置该service -->
+        <service
+            android:name="com.cyjh.ddy.media.service.MediaService"
+            android:exported="false" />
+    </application>
+</manifest>

@@ -1,0 +1,134 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+    id 'com.kezong.fat-aar'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        flavorDimensions 'default'
+
+        //android studio 4.0 以上打包会出现这个问题
+        //lintOptions { checkReleaseBuilds false }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            jniDebuggable false
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'//说明so的路径为该libs路径，关联所有so文件
+            java.srcDirs = ['src/main/java'] //代码文件未识别出现红j
+        }
+    }
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+    //如果有用到kapt添加如下配置
+    kapt {
+        useBuildCache = true
+        javacOptions {
+            option("-Xmaxerrs", 500)
+        }
+    }
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+    afterEvaluate {
+        publishing {
+            def versionName = "1.0"
+            publications {
+                // Creates a Maven publication called "release".
+                release(MavenPublication) {
+                    // Applies the component for the release build variant.
+                    from components.release
+
+                    // You can then customize attributes of the publication as shown below.
+                    groupId = 'com.cloud.duolib'
+                    artifactId = 'library'
+                    version = versionName
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1"
+    implementation 'androidx.fragment:fragment-ktx:1.3.2'
+    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.20"
+
+    //多多云sdk
+    api files('libs/sdk-device-out.jar')
+    //整改tx
+ //   api 'com.blankj:utilcode:1.23.4'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    //多多云使用pushFile、pullFile接口需要
+    api 'com.huawei.storage:esdk-obs-android:3.1.3'
+
+    //二维码识别库
+    api files('libs/core_3.0.1.jar')
+
+    //浮窗
+    implementation 'com.github.princekin-f:EasyFloat:1.3.4'
+
+    //加载图片
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //协程
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
+
+    //Retrofit + Rxjava 网络请求
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
+    //implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+    // Webview
+    api 'com.github.Justson.AgentWeb:agentweb-core:v5.0.0-alpha.1-androidx' // (必选)
+    //implementation 'com.github.Justson.AgentWeb:agentweb-filechooser:v5.0.0-alpha.1-androidx'// (可选)
+    //implementation 'com.github.Justson:Downloader:v5.0.0-androidx'// (可选)
+
+    // 相机模块更新
+    api 'org.webrtc:google-webrtc:1.0.32006'     // 最新的webrtc需要api 26起
+    api 'org.java-websocket:Java-WebSocket:1.4.0'
+
+    // aar dependency
+    embed (name: 'commonPlaySdk_v1.0.9.13', ext: 'aar')
+
+    // 百度云sdk
+    //api files('libs/commonPlaySdk_v1.0.9.13.aar')
+    //implementation name: 'commonPlaySdk_v1.0.9.13', ext: 'aar'
+}

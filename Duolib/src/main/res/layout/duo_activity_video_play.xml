@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/duo_media_gray"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.VideoPlayActivity">
+
+    <com.baidu.armvm.api.SdkView
+        android:id="@+id/sdk_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        layout="@layout/duo_view_media_menu"
+        android:visibility="gone" />
+</androidx.appcompat.widget.LinearLayoutCompat>

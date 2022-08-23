@@ -1,0 +1,60 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llSearch_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_4"
+        android:background="@drawable/duo_outline_gray_24"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:src="@mipmap/ic_search_90"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/etSearch_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_weight="1"
+            android:autofillHints="storage"
+            android:textColorHint="@color/gray3"
+            android:imeOptions="actionSearch"
+            android:hint="@string/search_all_file"
+            android:textCursorDrawable="@drawable/duo_style_edit_blue_1"
+            android:background="@null"
+            android:inputType="text"
+            android:maxLength="18"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/ivCancel_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:paddingEnd="8dp"
+            android:src="@mipmap/ic_delete_64"
+            android:visibility="gone" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/duo_item_file" />
+</androidx.appcompat.widget.LinearLayoutCompat>

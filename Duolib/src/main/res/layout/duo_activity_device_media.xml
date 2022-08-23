@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/duo_media_gray"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="com.cloud.duolib.ui.duo.DeviceMediaActivity">
+    <!--必须-->
+    <FrameLayout
+        android:id="@+id/videoContainer_media"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/clTool_media"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray3" />
+
+    <include layout="@layout/duo_view_media_menu" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvFile_media"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

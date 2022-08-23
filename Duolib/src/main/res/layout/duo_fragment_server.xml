@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray6"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/tvType_server"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_36"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:text="@string/cloud_server"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/sp_16" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvType_server"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="2"
+        tools:listitem="@layout/duo_item_server" />
+
+    <TextView
+        android:id="@+id/tvDetail_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_server"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_36"
+        android:padding="@dimen/dp_20"
+        android:text="@string/view_create_cloud"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tvTitle_server"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_36"
+        android:layout_below="@+id/tvDetail_server"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:text="@string/fee"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/sp_16" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetail_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle_server"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/duo_item_specify" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvPay_server"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginHorizontal="@dimen/dp_20"
+            android:layout_marginVertical="@dimen/dp_4"
+            android:background="@drawable/duo_radius_blue_24"
+            android:foreground="@drawable/view_foreground"
+            android:gravity="center"
+            android:text="@string/payCloud"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ilRetry_server"
+        layout="@layout/duo_layout_retry"
+        android:visibility="gone" />
+</RelativeLayout>

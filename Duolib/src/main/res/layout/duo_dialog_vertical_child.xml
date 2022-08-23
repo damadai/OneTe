@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivLoad_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_20"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_storage_210"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvTitle_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_48"
+        android:text="@string/storage_scan"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginVertical="@dimen/dp_20"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvTip_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:text="@string/describe_storage_scan"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/flContent_ver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</androidx.appcompat.widget.LinearLayoutCompat>

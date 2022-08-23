@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray6"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/duo_layout_top" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQue_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_48"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tv1_help"
+        app:spanCount="2"
+        tools:itemCount="5"
+        tools:listitem="@layout/duo_item_help" />
+
+    <include
+        android:id="@+id/ilRetry_help"
+        layout="@layout/duo_layout_retry"
+        android:visibility="gone" />
+</FrameLayout>

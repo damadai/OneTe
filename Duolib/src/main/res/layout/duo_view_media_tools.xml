@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btScan_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_alignParentTop="true"
+        android:background="@color/duo_media_gray"
+        android:drawableStart="@mipmap/ic_scan_144"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_18"
+        android:text="@string/scan"
+        android:textColor="@color/duo_media_white" />
+
+    <Button
+        android:id="@+id/btShake_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@+id/btScan_tools"
+        android:layout_alignStart="@+id/btScan_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:background="@color/duo_media_gray"
+        android:drawableStart="@mipmap/ic_shake_144"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="0dp"
+        android:text="@string/shake"
+        android:textColor="@color/duo_media_white" />
+
+    <Button
+        android:id="@+id/btShot_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@+id/btShake_tools"
+        android:layout_alignStart="@+id/btScan_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:background="@color/duo_media_gray"
+        android:drawableStart="@mipmap/ic_shot_144"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="0dp"
+        android:text="@string/shot"
+        android:textColor="@color/duo_media_white" />
+
+    <Button
+        android:id="@+id/btHelp_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@+id/btShot_tools"
+        android:layout_alignStart="@+id/btScan_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:background="@color/duo_media_gray"
+        android:drawableStart="@mipmap/ic_help_144"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="0dp"
+        android:text="@string/help"
+        android:textColor="@color/duo_media_white"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btFix3_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@+id/btHelp_tools"
+        android:layout_alignStart="@+id/btScan_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:background="@color/duo_media_gray"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="0dp"
+        android:text="SAVE"
+        android:textColor="@color/duo_media_white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btFix2_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@+id/btFix3_tools"
+        android:layout_alignStart="@+id/btScan_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:background="@color/duo_media_gray"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="0dp"
+        android:text="赞友同步账号"
+        android:textColor="@color/duo_media_white"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btFix_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@+id/btFix2_tools"
+        android:layout_alignStart="@+id/btScan_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:background="@color/duo_media_gray"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="0dp"
+        android:text="ROOT切换"
+        android:textColor="@color/duo_media_white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivTri_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btFix_tools"
+        android:layout_alignEnd="@+id/btScan_tools"
+        android:layout_gravity="end"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/duo_shape_triangle_gray_18" />
+</RelativeLayout>

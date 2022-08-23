@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="@dimen/dp_48"
+    android:background="@drawable/duo_radius_white_20"
+    android:gravity="center"
+    android:minWidth="240dp"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/tvTop_ver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_48"
+        android:text="@string/tips"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:visibility="visible" />
+
+    <include
+        layout="@layout/duo_dialog_vertical_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvDeny_ver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/duo_radius_gray_24"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_40"
+        android:text="@string/dismiss"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/sp_16"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btSure_ver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/duo_radius_blue_24"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_40"
+        android:text="@string/sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:visibility="visible" />
+</androidx.appcompat.widget.LinearLayoutCompat>

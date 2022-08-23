@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/duo_radius_white_8"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_10">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/ivDes_help"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/ivFore_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:drawablePadding="@dimen/dp_4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvQue_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvDescribe_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tvFix_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:foreground="@drawable/view_foreground"
+        android:gravity="end"
+        android:paddingTop="@dimen/dp_10"
+        android:text="@string/click_fix"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible" />
+</androidx.appcompat.widget.LinearLayoutCompat>

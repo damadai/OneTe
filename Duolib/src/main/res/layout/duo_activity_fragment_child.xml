@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/duo_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fra_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_48" />
+
+    <FrameLayout
+        android:id="@+id/flContent_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

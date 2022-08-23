@@ -1,0 +1,123 @@
+<resources>
+    <string name="camera">扫描功能</string>
+    <string name="record">录音功能</string>
+    <string name="storage_save">保存图片功能</string>
+    <string name="storage_scan">选择文件功能</string>
+    <string name="permission_camera">未授予相机权限</string>
+    <string name="permission_record">未授予录音权限</string>
+    <string name="permission_storage">未授予存储权限</string>
+    <string name="describe_camera">经您授权，在使用期间打开相机</string>
+    <string name="describe_record">经您授权，在使用期间打开录音</string>
+    <string name="describe_storage_save">经您授权，保存相关文件至存储文件夹</string>
+    <string name="describe_storage_scan">经您授权，扫描相关文件展示以供选择</string>
+    <string name="get_retry">已获取，请重试</string>
+    <string name="permission_open_set">去设置开启权限</string>
+    <string name="still_refuse">仍然拒绝</string>
+    <string name="refuse">拒绝</string>
+    <string name="agree">同意</string>
+
+    <string name="tips">提示</string>
+    <string name="sure">确定</string>
+    <string name="dismiss">取消</string>
+    <string name="refresh">刷新</string>
+    <string name="retry">点击重试</string>
+    <string name="iKnow">同意</string>
+    <string name="cxt_load">界面加载中..</string>
+    <string name="load_fail">加载失败，请检查网络后重试～</string>
+
+    <string name="quit_sure">确认要退出吗?</string>
+    <string name="start_use">开始使用</string>
+    <string name="end_use">结束使用</string>
+    <string name="payCloud">开始创建</string>
+    <string name="cloud_server">云机服务商</string>
+    <string name="cloud_host">云游戏自选机房</string>
+    <string name="server">服务商</string>
+    <string name="detail">详情</string>
+    <string name="fee">费用</string>
+    <string name="play">畅玩</string>
+    <string name="view_create_cloud">云手机</string>
+    <string name="view_to_ad">观看广告</string>
+    <string name="view_to_ad_line">观看广告直接进入排队</string>
+    <string name="view_enter_line">完成进入</string>
+    <string name="view_line_progress">排队进度</string>
+    <string name="view_wait_line_time">等待排队（%ss）</string>
+
+    <string name="queueLine">前面还有</string>
+    <string name="queueUser">人</string>
+    <string name="expectTime">预计剩余时间</string>
+    <string name="expectCount">分钟（已排</string>
+    <string name="expectCountEnd">）</string>
+    <string name="getCloud">获取云手机</string>
+    <string name="getCloudNow">立即获取云手机</string>
+    <string name="lineTip">排队已完成，点击下方立即获取按钮进入云手机界面吧\n注: 三分钟内没有点击获取需要重新排队</string>
+    <string name="quitLine">退出排队</string>
+    <string name="gain">立即获取</string>
+    <string name="line_quit">退出排队</string>
+    <string name="line_progress">排队进度</string>
+    <string name="line_front">前面还有</string>
+    <string name="line_time">预计剩余时间</string>
+    <string name="wait_num">%s人</string>
+    <string name="wait_time">%s分钟（已排</string>
+    <string name="wait_ready">（已排</string>
+    <string name="bracket_right">）</string>
+    <string name="thisCloud">(此设备)%s</string>
+    <string name="changeCloud">换一台</string>
+    <string name="stillWait">继续等待</string>
+    <string name="refresh_gain">刷新获取</string>
+
+    <string name="scan">扫一扫</string>
+    <string name="shake">摇一摇</string>
+    <string name="shot">截图</string>
+    <string name="root" translatable="false">ROOT</string>
+    <string name="help">帮助</string>
+    <string name="feedback">客服</string>
+    <string name="help_feedback">帮助</string>
+    <string name="click_fix">一键修复</string>
+    <string name="normal_ques">常见问题</string>
+
+    <string name="skip">跳过</string>
+    <string name="know">同意</string>
+    <string name="viewScreenShot">查看截图</string>
+    <string name="save">保存</string>
+    <string name="save_fail">保存失败</string>
+    <string name="save_dir">已保存至相册/图库</string>
+    <string name="shot_des">我的云手机截图</string>
+
+    <string name="clickAdd">点击添加</string>
+    <string name="helperCenter">客服中心</string>
+    <string name="tellEmil">请通过邮箱联系我们</string>
+    <string name="otherQueGroup">其他问题请联系\nQQ交流群：%s</string>
+    <string name="clipGroupSuc">已复制 QQ：%s 到剪切板</string>
+    <string name="clipSuc">已复制到剪切板</string>
+    <string name="clipFail">复制失败</string>
+    <string name="clipLink">复制链接</string>
+    <string name="click_quit_to">请退出重新获取</string>
+    <string name="click_clown">点击太频繁啦</string>
+    <string name="click_refresh">刷新%ss</string>
+
+    <string name="search_all_file">搜索所有文件</string>
+    <string name="select_size_out">一次所选超量啦</string>
+    <string name="back_last_dir">..返回上一级目录</string>
+    <string name="upload">上传</string>
+    <string name="push_collect">上传管理</string>
+    <string name="push_history">传输列表</string>
+    <string name="push_list_history">上传历史</string>
+    <string name="push_list_start">正在上传</string>
+    <string name="push_dop">分身</string>
+    <string name="push_speed">已加速</string>
+    <string name="item">%s 项</string>
+    <string name="open_now">正在打开..</string>
+    <string name="empty">空空如也</string>
+    <string name="empty_parse">无匹配项</string>
+    <string name="empty_enter">输入为空</string>
+    <string name="not_done_now">当前未完成</string>
+    <string name="not_select_now">当前未选择</string>
+
+    <string name="fix_can_not_pause">修复过程中，不能中断</string>
+    <string name="fix_finish">修复完毕，准备启动</string>
+    <string name="fixing">修复中…</string>
+    <string name="fix_start">开始修复…</string>
+    <string name="fix_prepare">准备修复…</string>
+    <string name="wait_for_jump">即将为您跳转…</string>
+    <string name="fix_fail">换机失败</string>
+</resources>
